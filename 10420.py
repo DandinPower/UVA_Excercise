@@ -8,6 +8,7 @@ def main():
             if (answer.get(country) == None):answer[country] = 0
             answer[country] = answer.get(country) + 1
         answer = {k:v for k,v in sorted(answer.items(),key = lambda item:item[1],reverse=True)}
-        print(answer)
+        for k,v in answer.items():
+            print(k,v)
 if __name__ == "__main__":
     main()
